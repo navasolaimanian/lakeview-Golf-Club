@@ -1,0 +1,72 @@
+.btn {
+
+    &:link,
+    &:visited {
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 1rem 3rem;
+        border-radius: 5rem;
+        font-size: $default-font-size;
+
+        border: 2px solid $brown;
+        position: relative;
+        display: inline-block;
+        transition: all .2s;
+    }
+
+    &:hover {
+        outline: none;
+        transform: translate(.3px);
+        box-shadow: 0 1rem 2rem rgba($black, .5);
+    }
+
+    &:active {
+        transform: translate(-1px);
+        box-shadow: 0 .5rem 1rem rgba($black, .5);
+    }
+
+    &--brown {
+        background-color: $brown;
+        color: $gray-light-1;
+        margin-right: 1rem;
+        @include respond (tab-land){
+            margin-top: 2rem;
+        }
+    }
+}
+
+.btn-rectangular {
+
+    &:link,
+    &:visited {
+        color: $brown;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-bottom: 1px solid $brown;
+        padding: 1rem 3rem;
+        font-size: $default-font-size;
+        transition: all .2s;
+    }
+
+    &:hover {
+        background-color: $brown;
+        color: $white;
+        box-shadow: 0 1rem 2rem rgba($black, .5);
+        transform: translate(-3px);
+    }
+
+    &:active {
+        transform: translate(-1px);
+        box-shadow: 0 .5rem 1rem rgba($black, .5);
+    }
+
+    &--white:link,
+    &:visited {
+        color: $white;
+        border-bottom: 1px solid $white;
+    }
+
+    &--white:hover {
+        border-bottom: 1px solid transparent;
+    }
+}

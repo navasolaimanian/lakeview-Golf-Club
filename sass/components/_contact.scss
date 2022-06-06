@@ -1,0 +1,24 @@
+.contact {
+    height: 53rem;
+    background-image: radial-gradient(circle closest-corner at 73% 59%, transparent 0%, transparent 50%, rgba(66, 109, 73, .4)50%), url(img/contact-form-img.jpg);
+    background-size: cover;
+    background-position: left 50%;
+    border-radius: 3rem;
+    box-shadow: 0 1.5rem 4rem rgba($black, .2);
+
+    @include respond (tab-port) {
+        background-image: radial-gradient(circle closest-corner at 73% 59%, rgba(66, 109, 73, .4) 0%, rgba(66, 109, 73, .4) 50%, rgba(66, 109, 73, .4)50%), url(img/contact-form-img.jpg);
+
+    }
+
+    &__form {
+        width: 50%;
+        padding: 6rem;
+
+        @include respond (tab-port) {
+            width: 100%;
+            text-align: center;
+            padding: 3rem;
+        }
+    }
+}

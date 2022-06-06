@@ -1,0 +1,48 @@
+.heading-primery {
+    color: white;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+
+    &--main {
+        font-size: 7rem;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        display: block;
+    }
+
+    &--sub {
+        display: block;
+        font-family: "satisfy", serif;
+        font-size: 2.6rem;
+    }
+}
+
+.heading-secondary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-image: linear-gradient(to right, $pimary-light , $secondary-light);
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all 1s;
+    @include respond (tab-port){
+        margin-bottom: -4rem;
+    }
+    &:hover {
+        transform: translateY(-15px);
+    }
+}
+
+.heading-tertiary {
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}

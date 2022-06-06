@@ -1,0 +1,96 @@
+.testimonial {
+    width: 40%;
+    background-color: rgba($white, .6);
+    box-shadow: 0 3rem 6rem rgba($black, .1);
+    display: inline-block;
+    border-radius: 2rem;
+    overflow: hidden;
+
+    @include respond(tab-port) {
+        width: 90%;
+    }
+
+    &__shape {
+        width: 15rem;
+        height: 15rem;
+        float: left;
+        -webkit-clip-path: circle(90% at 3% 8%);
+        clip-path: circle(90% at 3% 8%);
+        shape-outside: circle(100% at 3% 8%);
+        -webkit-shape-outside: circle(100% at 3% 8%);
+        position: relative;
+        transform: translate(-3rem);
+    }
+
+    &__img {
+        height: 100%;
+        transform: scale(1.5);
+        transition: all .5s;
+        @include respond (tab-port){
+            filter: blur(3px) brightness(80%);
+            transform: none;
+        }
+    }
+
+    &:hover &__img {
+        transform: scale(1.2);
+        filter: blur(3px) brightness(80%);
+        @include respond (tab-port){
+            transform: none;
+        }
+    }
+
+    &__paragraph {
+        font-size: 1.5rem;
+
+    }
+
+    &__text {
+        padding: 3rem;
+    }
+
+    &__caption {
+        position: absolute;
+        top: 50%;
+        @include center-object;
+        color: $white;
+        font-size: 1.7rem;
+        opacity: 0;
+        transition: all .5s;
+        @include respond (tab-port){
+            opacity: 1;
+        }
+    }
+
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -80%);
+            
+    }
+
+    &--1 {
+        float: left;
+        margin-left: 5rem;
+        margin-top: -20rem;
+
+        @include respond(tab-port) {
+            margin-left: 0;
+            float: none;
+        }
+    }
+
+    &--2 {
+        float: right;
+        margin-right: 5rem;
+        margin-bottom: 10rem;
+
+        @include respond(tab-port) {
+            margin-right: 0;
+            float: none;
+        }
+    }
+}
+
+.margin {
+    margin-top: -10rem;
+}

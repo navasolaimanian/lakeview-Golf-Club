@@ -1,0 +1,77 @@
+.footer {
+    height: 40vh;
+    font-size: 1.4rem;
+    background-color: $gray-dark-3;
+    position: relative;
+
+    @include respond (tab-port) {
+        height: 30vh;
+    }
+
+    &__logo {
+        height: 10rem;
+        width: 20rem;
+        position: absolute;
+        top: 9rem;
+        @include center-object;
+    }
+
+    &__menu {
+        margin-top: 6.1rem;
+        float: left;
+        margin-left: 7rem;
+
+        @include respond (tab-port) {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        color: $gray-dark-2;
+        border-top: 2px solid $gray-dark;
+        padding-top: 2rem;
+
+        @include respond (tab-port) {
+            text-align: center;
+
+        }
+    }
+
+    &__item {
+        display: inline-block;
+        transition: all .2s;
+
+        a {
+            text-decoration: none;
+            color: $gray-dark-2;
+            transition: all .2s;
+
+            &:hover {
+                color: $white;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+    &__para {
+        color: $gray-dark-2;
+        margin-top: 6rem;
+        border-top: 2px solid $gray-dark;
+        padding-top: 2rem;
+        float: right;
+
+        @include respond (tab-port) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
